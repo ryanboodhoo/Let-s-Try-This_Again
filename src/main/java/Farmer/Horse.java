@@ -1,6 +1,6 @@
 package Farmer;
 //Horse (Inherits from Animal and Implements Rideable)
-public class Horse extends Animal implements Rideable {
+public class Horse extends Animal{
 
     private boolean ridden;
 
@@ -12,8 +12,7 @@ public class Horse extends Animal implements Rideable {
         return true;
     }
 
-    @Override
-    public boolean eat(Edible edible) {
+     public boolean eat(Edible edible) {
         if (edible != null) {
             System.out.println("Horse is eating " + edible);
         }
@@ -25,8 +24,7 @@ public class Horse extends Animal implements Rideable {
         System.out.println("*Neigh*");
     }
 
-    @Override
-    public boolean ride() {
+     public boolean ride() {
         if (canBeRidden()) {
             this.ridden = true;
             System.out.println("You are now riding the horse.");

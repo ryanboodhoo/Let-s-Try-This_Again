@@ -1,6 +1,6 @@
 package Farmer;
 
-public class Cornstalk extends Crop implements Edible{
+public  class Cornstalk extends Crop implements Edible {
 
 
     public Cornstalk(boolean harvested, boolean fertilized) {
@@ -8,13 +8,9 @@ public class Cornstalk extends Crop implements Edible{
     }
 
     @Override
-    public Edible yield() {
-        Corn corn = null;
-        if (this.isHarvested() && this.isFertilized()){
-            corn = new Corn();
-        } else {
-            System.out.println("cornstalk is not edible");
-        }
-        return corn;
+    public Egg yield() {
+        Egg egg = new Egg();
+        return egg;
     }
+
 }

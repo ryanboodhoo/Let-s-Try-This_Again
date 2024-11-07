@@ -27,5 +27,5 @@ public abstract class Crop implements Produce {
         return harvested;
     }
 
-    public abstract Edible yield();
+    public abstract Egg yield();
 }

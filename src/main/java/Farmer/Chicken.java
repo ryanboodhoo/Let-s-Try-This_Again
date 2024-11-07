@@ -22,7 +22,7 @@ public class Chicken extends Animal implements Produce {
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
-    @Override
+
     public boolean eat(Edible edible) {
         System.out.println("Chicken eats" + edible);
         return false;
@@ -34,7 +34,7 @@ public class Chicken extends Animal implements Produce {
     }
 
     @Override
-    public Edible yield() {
+    public Egg yield() {
         Egg egg = null;
         if (hasBeenFertilized){
             egg = new Egg();
