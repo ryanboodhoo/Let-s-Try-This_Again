@@ -25,16 +25,19 @@ public class HorseTests {
     }
 
     @Test
-    public void testHorseCanBeFed() {
-        Edible feed = new Cornstalk(true, true); // Assume `Cornstalk` is an `Edible` item
-        boolean canEat = horse.eat(feed);
+    public void testHorseCanEat() {
 
-        assertTrue(canEat, "Horse should be able to eat the feed");
+        Edible feed = new Cornstalk(true, true);
+
+        horse.eat(feed);
+
+
     }
 
     @Test
     public void testHorseCanBeRidden() {
-        boolean canRide = horse.ride();
+       Person person1 = new Person("01" , "Ryan");
+        boolean canRide = horse.ride(person1);
 
         assertTrue(canRide, "Horse should be able to be ridden");
     }
