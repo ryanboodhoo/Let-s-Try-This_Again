@@ -2,7 +2,7 @@ package Farmer;
 
 // Person class represents an individual who can eat, make noise, and ride objects.
 // Implements Eater and Rider interfaces to define specific behaviors.
-public class Person implements Eater, Rider {
+public class Person implements Eater, Rider, Botanist {
     // Unique identifier for each person.
     private String id;
 
