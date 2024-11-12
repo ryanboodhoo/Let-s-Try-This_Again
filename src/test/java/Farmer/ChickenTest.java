@@ -27,7 +27,8 @@ public class ChickenTest {
 
     public void eat() {
         Edible feed = new Cornstalk(true, true); // Assume `Cornstalk` is an `Edible` item
-        boolean canEat = chicken.eat(feed);
+
+        chicken.eat(feed);
 
 
     }

@@ -11,7 +11,12 @@ public class BotanistTest {
         // Given
         Person person = new Person("1", "Froilan"); // A new Person instance
         CropRow cropRow = new CropRow(); // A new CropRow instance
-        Crop crop = new Crop(); // A new Crop object
+        Crop crop = new Crop() {
+            @Override
+            public Egg yield() {
+                return null;
+            }
+        }; // A new Crop object
 
         // When
         ((Botanist) person).plant(cropRow, crop); // Cast Person to Botanist and plant crop in CropRow

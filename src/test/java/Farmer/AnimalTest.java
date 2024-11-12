@@ -14,6 +14,11 @@ class AnimalTest {
         // Creating an anonymous instance of Animal for testing
         animal = new Animal() {
             @Override
+            public void eat(Edible edible) {
+
+            }
+
+            @Override
             public void makeNoise() {
                 // Optional: Implement noise-making behavior for testing if needed
             }
