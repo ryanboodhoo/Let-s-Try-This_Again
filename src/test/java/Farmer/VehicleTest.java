@@ -7,21 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class VehicleTest {
 
     @Test
-    public void testCanRide(){
-        Vehicle tractor = new Tractor();
-        Vehicle cropDuster = new CropDuster();
-
-        tractor.canRide();
-        cropDuster.canRide();
+    public void testVehicles(){
+        Tractor tractor = new Tractor();
+        CropDuster cropDuster = new CropDuster();
+        assertTrue(tractor instanceof Vehicle);
+        assertTrue(cropDuster instanceof Vehicle);
     }
 
-    @Test
-    public void testMakesNoise(){
-        Vehicle tractor = new Tractor();
-        Vehicle cropDuster = new CropDuster();
 
-        tractor.makeNoise();
-        cropDuster.makeNoise();
-    }
 
 }

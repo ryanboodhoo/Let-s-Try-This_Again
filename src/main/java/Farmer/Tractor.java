@@ -14,7 +14,7 @@ public class Tractor extends FarmVehicle {
         System.out.println("We can ride the tractor.");
     }
 
-    public void harvest(CropRow cropRow){
+    public static void harvest(CropRow cropRow){
         System.out.println("Harvesting crops from crop row...");
         cropRow.getCrops();
     }

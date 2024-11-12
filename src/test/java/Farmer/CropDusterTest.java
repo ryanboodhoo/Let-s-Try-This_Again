@@ -8,6 +8,9 @@ class CropDusterTest {
 
     @Test
     void testFertilize() {
+        CropRow cropRow = new CropRow();
 
+        //Can crop duster fertilize?
+        CropDuster.fertilize(cropRow);
     }
 }

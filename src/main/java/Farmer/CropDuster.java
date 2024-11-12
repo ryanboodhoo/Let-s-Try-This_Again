@@ -19,7 +19,7 @@ public class CropDuster extends FarmVehicle implements Aircraft{
         System.out.println("We can ride the crop duster.");
     }
 
-    public void fertilize(CropRow cropRow){
+    public static void fertilize(CropRow cropRow){
         System.out.println("Fertilizing crop row...");
     }
 
