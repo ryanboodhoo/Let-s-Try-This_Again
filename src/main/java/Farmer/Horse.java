@@ -1,8 +1,10 @@
 package Farmer;
 //Horse (Inherits from Animal and Implements Rideable)
-public class Horse extends Animal implements Rideable {
+public class Horse extends Animal implements Rideable , Eater {
 
     private boolean ridden;
+    private String Horsename;
+
 
     public Horse() {
         this.ridden = false;
@@ -12,12 +14,10 @@ public class Horse extends Animal implements Rideable {
         return true;
     }
 
-     public boolean eat(Edible edible) {
-        if (edible != null) {
-            return true;
-        }
-         return false;
-     }
+    @Override
+    public void eat(Edible edible) {
+        System.out.println( Horsename + " is eating " + edible);
+    }
 
     @Override
     public void makeNoise() {
@@ -45,5 +45,9 @@ public class Horse extends Animal implements Rideable {
     @Override
     public String toString() {
         return "Horse";  // Or if you have a specific horse name, return it here
+    }
+
+    public String getHorsename() {
+        return Horsename;
     }
 }

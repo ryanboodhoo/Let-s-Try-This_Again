@@ -11,6 +11,10 @@ public abstract class Crop implements Produce {
         this.fertilized = fertilized;
     }
 
+    public Crop() {
+
+    }
+
     public void setHarvested(boolean harvested) {
         this.harvested = harvested;
     }

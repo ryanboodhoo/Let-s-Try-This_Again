@@ -23,9 +23,11 @@ public class Chicken extends Animal implements Produce {
     }
 
 
-    public boolean eat(Edible edible) {
+    public void eat(Edible edible) {
+        Chicken chicken = new Chicken(true);
         System.out.println("Chicken eats" + edible);
-        return false;
+        chicken.eat(new Corn());
+
     }
 
     @Override

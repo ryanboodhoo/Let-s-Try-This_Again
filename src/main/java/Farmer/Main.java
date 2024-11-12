@@ -10,23 +10,27 @@ public class Main {
         Horse horse2 = new Horse();
         Horse horse3 = new Horse();
 
-        Stable stable = new Stable();
-        stable.addHorse(horse1);
-        stable.addHorse(horse2);
-        stable.addHorse(horse3);
+        Stable stable1 = new Stable();
+        stable1.addHorse(horse1);
+        stable1.addHorse(horse2);
+        stable1.addHorse(horse3);
+
+        stable1.getHorses();
 
         CropRow cropRow1 = new CropRow();
         CropRow cropRow2 = new CropRow();
         CropRow cropRow3 = new CropRow();
 
+        Corn corn = new Corn();
+
         for (int day = 1; day <= 7; day++) {
             System.out.println("\n--- Day " + day + " ---");
 
-            rideHorses(froilan, stable);
-            rideHorses(froilanda, stable);
+            rideHorses(froilan, stable1);
+            rideHorses(froilanda, stable1);
 
-            feedHorses(froilan, stable);
-            feedHorses(froilanda, stable);
+            feedHorses(froilan, stable1);
+            feedHorses(froilanda, stable1);
 
             breakfast(froilan);
             breakfast(froilanda);
@@ -41,21 +45,21 @@ public class Main {
         }
     }
 
-    private static void rideHorses(Person person, Stable stable) {
+
+    private static void rideHorses(Person person, Stable stable1) {
         System.out.println(person + " is riding all the horses.");
-        for (Horse horse : stable.getHorses()) {
+        for (Horse horse : stable1.getHorses()) {
             person.mount(horse);
             horse.ride(person);
             System.out.println();
         }
     }
 
-    private static void feedHorses(Person person, Stable stable) {
+    private static void feedHorses(Person person, Stable stable1) {
         System.out.println(person + " is feeding the horses.");
-        for (Horse horse : stable.getHorses()) {
-            for (int i = 0; i < 3; i++) {
-                horse.eat(new Corn());
-            }
+        for (Horse horse : stable1.getHorses()) {
+            Corn corn = new Corn();
+            System.out.println("Feeding horse: " + horse + " is eating " + corn);
         }
         System.out.println();
     }

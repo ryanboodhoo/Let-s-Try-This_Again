@@ -10,7 +10,12 @@ public class RiderTest {
     public void testRiderCanMountAndDismount() {
         // Given
         Person person = new Person("1", "Froilan"); // A new Person instance
-        Rideable rideable = new Rideable() {}; // Anonymous Rideable instance for testing
+        Rideable rideable = new Rideable() {
+            @Override
+            public void canRide() {
+
+            }
+        }; // Anonymous Rideable instance for testing
 
         // When
         person.mount(rideable); // Person mounts the Rideable
