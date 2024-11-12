@@ -7,7 +7,7 @@ public class Person implements Eater, Rider {
     private String id;
 
     // Name of the person.
-    private String name;
+    private  String name;
 
     // Constructor to initialize Person with an ID and name.
     public Person(String id, String name) {
@@ -40,5 +40,20 @@ public class Person implements Eater, Rider {
     public void dismount(Rideable rideable) {
         System.out.println(name + " is dismounting a rideable object.");
     }
+
+    public String getName() {
+        return name;
+    }
+    public void plant(CropRow cropRow, Crop crop) {
+        cropRow.addCrop(crop);
+        System.out.println(name + " is planting " + crop.getClass().getSimpleName() + " in the crop row.");
+    }
+
+
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }
+
 
