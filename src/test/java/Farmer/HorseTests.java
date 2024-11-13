@@ -15,7 +15,7 @@ public class HorseTests {
 
     @BeforeEach
     public void setup() {
-        horse = new Horse();
+        horse = new Horse("sam");
     }
 
     @Test

@@ -3,25 +3,28 @@ package Farmer;
 public class Horse extends Animal implements Rideable , Eater {
 
     private boolean ridden;
-    private String Horsename;
+    private String name;
 
 
-    public Horse() {
+    public Horse(String name) {
         this.ridden = false;
+        this.name = name;
     }
 
     public boolean canBeRidden() {
         return true;
     }
 
+//    @Override
+//    public void eat(Edible edible) {
+//        System.out.println("is eating" + edible);
+//    }
     @Override
-    public void eat(Edible edible) {
-        System.out.println( Horsename + " is eating " + edible);
-    }
+    public void eat(Edible edible) {System.out.println( "horse:" + name + " is eating " + edible);}
 
     @Override
     public void makeNoise() {
-        System.out.println("*Neigh*");
+        System.out.println( "*Neigh*");
     }
 
      public boolean ride(Person person) {
@@ -48,6 +51,6 @@ public class Horse extends Animal implements Rideable , Eater {
     }
 
     public String getHorsename() {
-        return Horsename;
+        return name;
     }
 }

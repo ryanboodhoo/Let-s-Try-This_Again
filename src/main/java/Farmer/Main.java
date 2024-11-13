@@ -6,9 +6,9 @@ public class Main {
         Person froilan = new Person("01", "Froilan");
         Person froilanda = new Person("02", "Froilanda");
 
-        Horse horse1 = new Horse();
-        Horse horse2 = new Horse();
-        Horse horse3 = new Horse();
+        Horse horse1 = new Horse("runner");
+        Horse horse2 = new Horse("daisy");
+        Horse horse3 = new Horse("blaze");
 
         Stable stable1 = new Stable();
         stable1.addHorse(horse1);
@@ -58,8 +58,9 @@ public class Main {
     private static void feedHorses(Person person, Stable stable1) {
         System.out.println(person + " is feeding the horses.");
         for (Horse horse : stable1.getHorses()) {
-            Corn corn = new Corn();
-            System.out.println("Feeding horse: " + horse + " is eating " + corn);
+
+            horse.eat(new Corn());
+
         }
         System.out.println();
     }
