@@ -1,7 +1,7 @@
 package Farmer;
 
 // Animal (Inherits from NoiseMaker and Eater)
-public abstract class Animal implements NoiseMaker {
+public abstract class Animal implements NoiseMaker , Eater {
 
     private int mealCount;
 
@@ -9,8 +9,8 @@ public abstract class Animal implements NoiseMaker {
         this.mealCount = 0;
     }
 
-    public void eat(Corn food) {
-        if (food != null) {
+
+    public void eatingMealCount(Corn food) {if (food != null) {
             mealCount++;
         }
     }

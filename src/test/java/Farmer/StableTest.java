@@ -6,7 +6,7 @@ public class StableTest {
     @Test
     public void testAddHorse() {
         Stable stable = new Stable();
-        Horse horse = new Horse();
+        Horse horse = new Horse("sam");
         stable.addHorse(horse);
 
         assertEquals(1, stable.getHorses().size());
